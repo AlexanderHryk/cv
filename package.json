@@ -6,7 +6,8 @@
   "scripts": {
     "start": "browser-sync start --server --files \"styles/*.css\" \"*.html\"",
     "babel": "babel js/scripts.js --watch --out-file prod/scripts.js",
-    "sass": "sass --watch styles/styles.scss styles/styles.css"
+    "sass": "sass --watch styles/styles.scss styles/styles.css",
+    "autoprefixer": "npx postcss styles/*.css --use autoprefixer -d prod/"
   },
   "author": "",
   "license": "ISC",
