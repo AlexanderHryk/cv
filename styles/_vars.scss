@@ -1,0 +1,34 @@
+$parallax-bg-color: rgba(53, 60, 79, 0.8);
+$box-shadow1: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+$box-shadow2: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+$box-shadow3: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+$section-padding: 75px;
+
+$color1: #162836;
+$color2: #01bafd;
+
+%section-header1 {
+  font-size: 45px;
+  font-weight: 800;
+  color: #2c3d4f;
+  letter-spacing: 6px;
+  text-align: center;
+}
+
+%section-header2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #7e868e;
+}
+
+%section-paragraph {
+  font-size: 16px;
+  line-height: 28px;
+  color: #7e868e;
+}
+
+@media only screen and (max-width: 767px) {
+  %section-header1 {
+    font-size: 32px;
+  }
+}

@@ -1,0 +1,157 @@
+$navbar-height: 60px;
+$border-color: #ffffff40;
+
+#top-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+nav.navbar {
+  position: relative;
+  width: 100%;
+  height: $navbar-height;
+  background-color: $color1;
+  box-shadow: $box-shadow1;
+  z-index: 10000;
+
+  > button.toggle-nav-btn {
+    min-width: 54px;
+    min-height: 42px;
+    float: right;
+    font-size: 24px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    margin: 9px;
+    cursor: pointer;
+  }
+
+  > .nav-container {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $color1;
+    margin-top: $navbar-height;
+
+    > ul {
+      list-style: none;
+    }
+
+    > ul > li {
+      padding: 0 24px;
+      border-top: 1px dashed $border-color;
+    }
+
+    > ul > li:first-child {
+      border: none;
+    }
+
+    > ul > li > a {
+      display: block;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 700;
+      color: #8a8a8c;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: ($navbar-height - 18px) / 2 4px;
+    }
+
+    > ul > li > a.active {
+      color: #d6ac22;
+    }
+  }
+
+  @media only screen and (min-width: 767px) {
+    background-color: transparent;
+
+    > button.toggle-nav-btn {
+      display: none;
+    }
+
+    > .nav-container {
+      display: block !important; /* style="display: none" (jQuery) */
+      background-color: transparent;
+      margin: 0;
+      padding: 0 60px;
+      box-sizing: border-box;
+
+      > ul {
+        float: right;
+      }
+
+      > ul > li {
+        float: left;
+        padding: 0;
+        border: none;
+      }
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: $navbar-height;
+      background-color: $color1;
+      opacity: 0.9;
+      transition: opacity 0.2s;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
+  }
+}
+
+#navbar-padding {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: $navbar-height;
+  background-color: white;
+  z-index: 9999;
+
+  @media only screen and (min-width: 767px) {
+    display: block;
+  }
+}
+
+/* #region Animation */
+.nav-effect > li > a::before,
+.nav-effect > li > a::after {
+  display: inline-block;
+  color: $color2;
+  font-weight: 700;
+  opacity: 0;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.nav-effect > li > a::before {
+  content: "|";
+  margin-right: 10px;
+  transform: translateX(20px);
+}
+
+.nav-effect > li > a::after {
+  content: "|";
+  margin-left: 10px;
+  transform: translateX(-20px);
+}
+
+.nav-effect > li > a:hover::before,
+.nav-effect > li > a:hover::after,
+.nav-effect > li > a:focus::before,
+.nav-effect > li > a:focus::after {
+  opacity: 1;
+  transform: translateX(0px);
+}
+
+/* #endregion Animation */

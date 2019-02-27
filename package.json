@@ -1,0 +1,20 @@
+{
+  "name": "cv",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "browser-sync start --server --files \"css/*.css\" \"*.html\"",
+    "babel": "babel js/scripts.js --watch --out-file prod/scripts.js",
+    "sass": "sass --watch css/styles.scss css/styles.css"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.3",
+    "autoprefixer": "^9.4.9",
+    "babel-preset-env": "^1.7.0",
+    "postcss-cli": "^6.1.2"
+  }
+}
