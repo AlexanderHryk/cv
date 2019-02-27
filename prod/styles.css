@@ -1026,19 +1026,19 @@ span.inline-wrapper > span.inline-content.align-right {
   background-size: cover;
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header.bg1::before {
-  background-image: url("/res/smartphone1.jpg");
+  background-image: url("/img/smartphone1.jpg");
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header.bg2::before {
-  background-image: url("/res/cows.jpg");
+  background-image: url("/img/cows.jpg");
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header.bg3::before {
-  background-image: url("/res/smartphone2.jpg");
+  background-image: url("/img/smartphone2.jpg");
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header.bg4::before {
-  background-image: url("/res/laptop1.jpg");
+  background-image: url("/img/laptop1.jpg");
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header.bg5::before {
-  background-image: url("/res/smartphone3.jpg");
+  background-image: url("/img/smartphone3.jpg");
 }
 .projects-container > .flex-container > .project-info > .wrapper > .image-header::after {
   background-color: #162836;
