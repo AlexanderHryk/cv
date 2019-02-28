@@ -578,7 +578,8 @@ span.inline-wrapper > span.inline-content.align-right {
 
 .home-container {
   color: white;
-  padding: 125px 0;
+  padding-top: 125px;
+  padding-bottom: 125px;
 }
 .home-container > ul.social {
   list-style: none;
